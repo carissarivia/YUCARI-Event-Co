@@ -1,0 +1,111 @@
+/* public/css/form.css */
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Arial', 'Times New Roman', Times, serif;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    padding-bottom: 60px; /* Menambahkan padding bawah untuk memberi jarak */
+}
+
+.form-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Agar form-card berada di tengah secara horizontal */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+.form-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgba(130, 107, 52, 0.799);
+    font-family: 'Georgia', serif;
+}
+
+.inputBox {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.inputBox input, .inputBox textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: #f0f0f0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.inputBox input:focus ~ span, .inputBox input:valid ~ span,
+.inputBox textarea:focus ~ span, .inputBox textarea:valid ~ span {
+    top: -10px;
+    font-size: 0.75rem;
+    color: #333;
+}
+
+.inputBox input:focus, .inputBox textarea:focus {
+    background: #e0e0e0;
+}
+
+.inputBox textarea {
+    resize: none;
+    height: 100px;
+}
+
+input[type="submit"] {
+    display: block; /* Mengubah menjadi block untuk memudahkan pengaturan margin */
+    margin: 0 auto; /* Menempatkan tombol di tengah secara horizontal */
+    padding: 1rem 3rem; /* Adjusted padding to make button larger */
+    background-color: rgba(140, 141, 85, 0.8); /* Transparent color*/
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px; /* Adjusted border radius for a more rounded look */
+    animation: fadeIn 2s ease-in;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem; /* Adjusted font size */
+    cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: rgba(167, 127, 34, 0.8); /* Transparent color to blend with background */
+        transform: scale(1.05);
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-fadeIn {
+        animation: fadeIn 1s forwards;
+    }
+    

@@ -1,0 +1,115 @@
+/* public/assets/css/custom.css */
+
+/* Filter hitam putih untuk logo */
+.navbar-brand-img {
+    filter: grayscale(100%);
+}
+
+/* Filter hitam putih untuk ikon di sidebar */
+.sidenav .navbar-nav .nav-item .icon {
+    filter: grayscale(100%);
+    background-color: rgba(255, 255, 255, 0.3); /* Latar belakang yang lebih terang dan transparan */
+    border-radius: 0.375rem; /* Sesuaikan dengan border-radius yang diinginkan */
+}
+
+/* Menyesuaikan latar belakang ikon untuk status aktif */
+.sidenav .navbar-nav .nav-item .nav-link.active .icon {
+    background-color: rgba(255, 255, 255, 0.778); /* Latar belakang yang lebih terang saat aktif */
+    filter: grayscale(75%) brightness(1.5); /* Menambahkan filter brightness untuk memastikan ikon terlihat */
+}
+
+/* Gaya tambahan untuk memastikan sidebar tidak menutupi navbar dan footer */
+.sidenav {
+    z-index: 1030;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2); /* Efek bayangan yang lebih tebal */
+}
+
+.navbar-main {
+    z-index: 1040;
+    position: relative;
+}
+
+.main-content {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar Anda */
+}
+
+.footer {
+    z-index: 1030;
+    position: relative;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+/* custom.css */
+.table-responsive {
+    padding: 20px;
+}
+
+.table th, .table td {
+    vertical-align: middle !important;
+}
+
+.btn-edit, .btn-delete, .btn-add {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+}
+
+.btn-add {
+    background-color: #008CBA; /* Blue */
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-add:hover {
+    opacity: 0.8;
+}
+
+/* Add custom styles for the table */
+#customer-table {
+    width: 100% !important;
+}
+
+#customer-table thead th {
+    border-bottom: 1px solid #dee2e6;
+}
+
+#customer-table tbody td {
+    border-top: 1px solid #dee2e6;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: right;
+    text-align: right;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    text-align: right;
+}
+
+
